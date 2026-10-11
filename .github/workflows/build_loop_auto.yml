@@ -234,7 +234,11 @@ jobs:
           # and make sure to specify the submodule by setting "--directory=(submodule_name)".
           # Several patches may be added per submodule.
           # Adding comments (#) may be useful to easily tell the individual patches apart.
-
+   
+          # Submodule OmnipodKit patches:
+          # Pod site tracking
+          curl https://github.com/loopandlearn/OmnipodKit/compare/dev...domoftherocks-loop:OmnipodKit:pod-site-tracking.diff | git apply --directory=OmnipodKit -v --whitespace=fix
+      
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: |
